@@ -1,0 +1,35 @@
+{
+  "run_list": [
+    "recipe[ires]"
+  ],
+  "rvm": {
+    "install_rubies": true,
+    "rubies": [
+      "1.9.3"
+    ]
+  },
+  "rvm_passenger": {
+    "rvm_ruby": "1.9.3"
+  },
+  "nginx": {
+    "version": "1.0.10",
+    "user": "root"
+  },
+  "monit":{
+    "polling_frequency": 120
+  },
+  "node_name": "server.ires.com",
+  "host": "localhost",
+  "user": "root",
+  "rails_env": "production",
+  "rvm_ruby": "1.9.3",
+  "current_app": {
+    "id": "ires",
+    "deploy_to": "/home/data/ires",
+    "owner": "deploy",
+    "group": "deploy",
+    "repository": "git://github.com/phuongnd08/iRes.git",
+    "revision": "master",
+    "force": false
+  }
+}
